@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     private Rigidbody2D rb;
     private Animator anim;
-    private bool grounded;
+    public bool grounded;
 
     private void Awake()
     {
@@ -32,13 +32,7 @@ public class PlayerMovement : MonoBehaviour
     
     private void Jump()
     {
-        rb.velocity = new Vector2(rb.velocity.x, speed * 2);
+        rb.velocity = new Vector2(rb.velocity.x, speed * 2.5f);
         grounded = false;
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Ground")
-            grounded = true;
     }
 }
