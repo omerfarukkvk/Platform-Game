@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -5,7 +7,10 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     private Rigidbody2D rb;
     private Animator anim;
+    public RuntimeAnimatorController animWGun;
     public bool grounded;
+    public bool jumpCooldown;
+    public bool wGun;
 
     private void Awake()
     {
@@ -23,8 +28,14 @@ public class PlayerMovement : MonoBehaviour
         else if (horizontalInput < -0.01f)
             transform.localScale = new Vector3(-1, 1, 1);
 
-        if (Input.GetKey(KeyCode.W) && grounded)
+        if (Input.GetKey(KeyCode.W) && grounded && jumpCooldown)
             Jump();
+
+        if (wGun)
+        {
+            gameObject.GetComponent<Animator>().runtimeAnimatorController = animWGun;
+            
+        }
 
         anim.SetBool("run", horizontalInput != 0);
         anim.SetBool("grounded", grounded);
@@ -34,5 +45,13 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = new Vector2(rb.velocity.x, speed * 2.5f);
         grounded = false;
+        StartCoroutine(JumpCooldown());
+    }
+
+    IEnumerator JumpCooldown()
+    {
+        jumpCooldown = false;
+        yield return new WaitForSeconds(0.4f);
+        jumpCooldown = true;
     }
 }

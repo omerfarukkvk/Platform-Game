@@ -21,7 +21,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: bfd2a9affb544594b8dbf43e7bc4b2ff, type: 2}
+  m_Motion: {fileID: 7400000, guid: 527efe6d392ca0448b4d614427eeb4a5, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -73,7 +73,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 8b2bedb616e012447972cd6b05b1506a, type: 2}
+  m_Motion: {fileID: 7400000, guid: c8d55364d1d29244c950b5b76974a594, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -100,7 +100,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 442c128bb4d13c94bbc1aec9bde44f8d, type: 2}
+  m_Motion: {fileID: 7400000, guid: b90092f6715cabd4f9c8d5cf947c9040, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -141,7 +141,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player
+  m_Name: PlayerWGun
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: run

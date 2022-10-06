@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public PlatformEffector2D effector;
+
     void Start()
     {
-        
+        effector = GetComponent<PlatformEffector2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            effector.rotationalOffset = 180f;
+        }
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            effector.rotationalOffset = 0f;
+        }
     }
 }
