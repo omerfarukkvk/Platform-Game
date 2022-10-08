@@ -220,7 +220,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startColor:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 2
       minColor: {r: 0.7960785, g: 0.5058824, b: 0.36862746, a: 1}
       maxColor: {r: 1, g: 0.7411765, b: 0.1254902, a: 1}
       maxGradient:
@@ -1539,7 +1539,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+    - sprite: {fileID: -1453350334737186109, guid: 2cdf9e47f2ea52446a2fb9a282815cf7, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:

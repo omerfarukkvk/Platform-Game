@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int health;
-    public ParticleSystem deadthParticle;
+    public ParticleSystem deathParticle;
     void Start()
     {
         
@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
 
     void destroyEnemy()
     {
-        Instantiate(deadthParticle, transform.position, transform.rotation);
+        Instantiate(deathParticle, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 }
