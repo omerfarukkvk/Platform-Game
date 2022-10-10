@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     public float speed;
     public Rigidbody2D rb;
+    public ParticleSystem hitGround;
 
     void Start()
     {
@@ -20,6 +21,11 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.tag == "Ground")
+        {
+            Instantiate(hitGround, transform.position, transform.rotation);
+            Destroy(gameObject);
+        }
         if (collision.gameObject.tag == "Bee")
         {
             Destroy(gameObject);

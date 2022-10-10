@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4155139378430090692}
   - component: {fileID: -4679633908404284270}
   m_Layer: 0
-  m_Name: BlueBeeEnemyDeathEffect
+  m_Name: BulletCollisionGroundEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4155139378430090694}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 2.226637, y: -0.4463253, z: -1.2793427}
+  m_LocalPosition: {x: 2.226637, y: -0.4463253, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -222,8 +222,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.003921569, g: 0.5921569, b: 0.77647066, a: 1}
-      maxColor: {r: 0.17254902, g: 0.7725491, b: 0.96470594, a: 1}
+      minColor: {r: 0.85098046, g: 0.6431373, b: 0.50980395, a: 1}
+      maxColor: {r: 0.7137255, g: 0.8352942, b: 0.23529413, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -285,7 +285,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.3
+      scalar: 0.2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -665,7 +665,7 @@ ParticleSystem:
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 1
+    radiusThickness: 0.58
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
@@ -748,7 +748,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.7
+      value: 0.2
       mode: 0
       spread: 0
       speed:
@@ -977,7 +977,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 20
+        scalar: 5
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -1042,7 +1042,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.4477617
+          value: 0.28358096
           inSlope: 0
           outSlope: 0
           tangentMode: 0

@@ -23,6 +23,5 @@ public class Enemy : MonoBehaviour
     {
         Instantiate(deathParticle, transform.position, transform.rotation);
         Destroy(gameObject);
-        Destroy(deathParticle);
     }
 }
