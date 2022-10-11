@@ -8,6 +8,7 @@ TagManager:
   - GroundCheck
   - Gun
   - Bee
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX
