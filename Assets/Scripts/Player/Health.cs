@@ -14,6 +14,10 @@ public class Health : MonoBehaviour
 
     private void Update()
     {
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
         if (health > numOfHeart)
         {
             health = numOfHeart;
@@ -39,5 +43,13 @@ public class Health : MonoBehaviour
                 hearts[i].enabled = false;
             }
         } 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Bee")
+        {
+            health--;
+        }
     }
 }

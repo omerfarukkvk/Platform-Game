@@ -7312,6 +7312,10 @@ PrefabInstance:
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 5598596627581251102, guid: f9b8e1da10b802b47b9fe451577f3b2a, type: 3}
+      propertyPath: m_Name
+      value: GroundDetection
+      objectReference: {fileID: 0}
     - target: {fileID: 6357266299294448288, guid: f9b8e1da10b802b47b9fe451577f3b2a, type: 3}
       propertyPath: m_Name
       value: BlueBee
