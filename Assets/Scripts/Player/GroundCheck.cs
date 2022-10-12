@@ -23,15 +23,12 @@ public class GroundCheck : MonoBehaviour
         if (collision.gameObject.tag == "MovingPlatform")
         {
             pm.grounded = true;
-            gameObject.transform.parent = collision.gameObject.transform;
+            gameObject.transform.parent.SetParent(collision.gameObject.transform);
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("MovingPlatform"))
-        {
-            gameObject.transform.parent = null;
-        }
+        gameObject.transform.parent.SetParent(null);
     }
 }

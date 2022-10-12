@@ -4,32 +4,27 @@ using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
-    public Transform pos1, pos2;
     public float speed;
-    public Transform startPos;
+    public int startPoint;
+    public Transform[] pos;
 
-    Vector3 nextPos;
+    private int i;
     void Start()
     {
-        nextPos = startPos.position;        
+        transform.position = pos[startPoint].position;        
     }
 
     void Update()
     {
-        if (transform.position == pos1.position)
+        if (Vector2.Distance(transform.position, pos[i].position) < 0.02f)
         {
-            nextPos = pos2.position;
-        }
-        if (transform.position == pos2.position)
-        {
-            nextPos = pos1.position;
+            i++;
+            if (i == pos.Length)
+            {
+                i = 0;
+            }
         }
 
-        transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawLine(pos1.position, pos2.position);
+        transform.position = Vector2.MoveTowards(transform.position, pos[i].position, speed * Time.deltaTime);
     }
 }

@@ -24,12 +24,11 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             Instantiate(hitGround, transform.position, transform.rotation);
-            Destroy(gameObject);
         }
         if (collision.gameObject.tag == "Bee")
         {
-            Destroy(gameObject);
             collision.gameObject.GetComponent<Enemy>().health -= 30;
         }
+        Destroy(gameObject);
     }
 }
